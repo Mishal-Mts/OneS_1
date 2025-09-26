@@ -13,15 +13,15 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #c71c4e 0%, #8b1538 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
             animation: backgroundShift 10s ease-in-out infinite alternate;
         }
 
         @keyframes backgroundShift {
-            0% { background: linear-gradient(135deg, #c71c4e 0%, #8b1538 100%); }
-            100% { background: linear-gradient(135deg, #8b1538 0%, #c71c4e 100%); }
+            0% { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+            100% { background: linear-gradient(135deg, #764ba2 0%, #667eea 100%); }
         }
 
         .container {
@@ -29,7 +29,7 @@
             margin: 0 auto;
             background: white;
             border-radius: 20px;
-            box-shadow: 0 25px 50px rgba(199, 28, 78, 0.3);
+            box-shadow: 0 25px 50px rgba(102, 126, 234, 0.3);
             overflow: hidden;
             animation: slideIn 0.8s ease-out;
         }
@@ -94,17 +94,17 @@
             padding: 25px;
             background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
             border-radius: 15px;
-            border: 2px solid #c71c4e;
+            border: 2px solid #667eea;
             animation: pulse 2s ease-in-out infinite;
         }
 
         @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(199, 28, 78, 0.4); }
-            50% { box-shadow: 0 0 0 10px rgba(199, 28, 78, 0); }
+            0%, 100% { box-shadow: 0 0 0 0 rgba(102, 126, 234, 0.4); }
+            50% { box-shadow: 0 0 0 10px rgba(102, 126, 234, 0); }
         }
 
         .step-indicator h3 {
-            color: #c71c4e;
+            color: #667eea;
             font-size: 22px;
             margin-bottom: 10px;
         }
@@ -142,13 +142,13 @@
         }
 
         .details-section:hover {
-            border-color: #c71c4e;
+            border-color: #667eea;
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(199, 28, 78, 0.15);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
         }
 
         .section-header {
-            background: linear-gradient(135deg, #c71c4e 0%, #a01640 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 18px 25px;
             color: white;
         }
@@ -185,7 +185,7 @@
         }
 
         .detail-row:hover {
-            background-color: rgba(199, 28, 78, 0.05);
+            background-color: rgba(102, 126, 234, 0.08);
         }
 
         .detail-row:last-child {
@@ -312,7 +312,7 @@
         }
 
         .checkbox-container:hover {
-            border-color: #c71c4e;
+            border-color: #667eea;
         }
 
         .checkbox-container input[type="checkbox"] {
@@ -460,7 +460,7 @@
             border-radius: 12px;
             font-size: 14px;
             color: #6c757d;
-            border-left: 4px solid #c71c4e;
+            border-left: 4px solid #667eea;
         }
 
         .loading {
@@ -565,6 +565,38 @@
             margin-top: 10px;
             cursor: pointer;
             text-decoration: underline;
+        }
+
+        .legal-links {
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-radius: 12px;
+            border: 2px solid #dee2e6;
+        }
+
+        .legal-links h4 {
+            color: #495057;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .legal-links a {
+            color: #c71c4e;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 15px;
+            padding: 8px 15px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .legal-links a:hover {
+            background-color: rgba(199, 28, 78, 0.1);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(199, 28, 78, 0.2);
         }
     </style>
 </head>
@@ -727,8 +759,15 @@
                     <div class="expand-btn" onclick="toggleSection('disclaimerContent', this)">Read Full Disclaimer ▼</div>
                 </div>
 
+                <!-- Legal Links Section -->
+                <div class="legal-links">
+                    <h4>📄 Legal Documents</h4>
+                    <a href="https://mf.ones.money/#/privacypolicy" target="_blank">Privacy Policy</a>
+                    <a href="https://mf.ones.money/#/termsconditions" target="_blank">Terms & Conditions</a>
+                </div>
+
                 <!-- Privacy Policy -->
-                <div class="privacy-policy collapsible">
+                <!-- <div class="privacy-policy collapsible">
                     <h4><span class="icon">🔒</span> Privacy Policy</h4>
                     <div class="collapsible-content collapsed" id="privacyContent">
                         <div class="policy-text">
@@ -746,10 +785,10 @@
                         </div>
                     </div>
                     <div class="expand-btn" onclick="toggleSection('privacyContent', this)">View Privacy Policy ▼</div>
-                </div>
+                </div> -->
 
                 <!-- Terms & Conditions -->
-                <div class="terms-conditions collapsible">
+                <!-- <div class="terms-conditions collapsible">
                     <h4><span class="icon">📋</span> Terms & Conditions</h4>
                     <div class="collapsible-content collapsed" id="termsContent">
                         <div class="terms-text">
@@ -769,7 +808,7 @@
                     </div>
                     <div class="expand-btn" onclick="toggleSection('termsContent', this)">View Terms & Conditions ▼</div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- Declaration Section -->
             <div class="declaration">
@@ -779,7 +818,7 @@
                     <br><br>
                     • All information provided above is true, complete, and accurate to the best of my knowledge<br>
                     • I have read and understood the mutual fund investment disclaimer and associated risks<br>
-                    • I have reviewed and agree to the Privacy Policy and Terms & Conditions<br>
+                    • I have reviewed the Privacy Policy and Terms & Conditions via the links provided above<br>
                     • I authorize the processing of my personal and financial data for investment purposes<br>
                     • I understand this will initiate KYC verification and regulatory compliance processes<br>
                     • I confirm the bank account details provided belong to me and are accurate<br>
